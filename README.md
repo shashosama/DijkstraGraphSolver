@@ -1,8 +1,23 @@
 # DijkstraGraphSolver
+## General Problem
 
+In many real-world applications—like navigation systems, network routing, and logistics—finding the shortest path between points in a graph is a core requirement. However, many implementations:
+- Focus only on fixed source nodes
+- Do not emphasize **odd-degree vertex analysis**, which has relevance in graph theory problems like the **Chinese Postman Problem**
+
+This project addresses the need for a **flexible shortest-path solver** that:
+- Supports undirected graphs
+- Identifies and computes shortest paths from **all vertices with odd degree**
+
+## Solution
+
+**DijkstraGraphSolver** is a modular C++ application that:
+
+- Reads a graph from standard input in edge list format
+- Constructs the graph using an adjacency matrix representation
+- Identifies all vertices with **odd degrees**
+- Runs **Dijkstra’s algorithm** from each of them
 # Graph Shortest Path Finder
-
-This project implements Dijkstra’s algorithm to find the shortest paths in an undirected graph. It reads input from standard input, constructs the graph, identifies all vertices with odd degrees, and runs Dijkstra’s algorithm from each of them.
 
 ##  Project Structure
 
@@ -47,4 +62,13 @@ Requirements
 GCC or any modern C++ compiler
 
 (Optional) VS Code with C++ extensions
+
+## What I Learned
+
+This project helped reinforce foundational and practical C++ skills:
+
+-  **Modular Design**: Broke down complex logic into separate reusable classes (`Vertex`, `Edge`, `Graph`)
+-  **Graph Theory**: Explored applications of odd-degree nodes in shortest path problems
+-  **Algorithm Mastery**: Implemented and debugged Dijkstra’s algorithm manually without relying on external libraries
+-  **Makefile & CLI Workflow**: Learned to automate compilation and streamline testing using Makefiles and standard input/output
 
